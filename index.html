@@ -17,10 +17,11 @@
 				$('input[type="radio"]').on('change', function() {
 					hide_tables();
 					if ($(this).is(':checked')) {
-						var target_id = "#"+$(this).val();
-						$(target_id).show();	
+						var target_id = "#id_all_"+$(this).val();
+						$(target_id).css('display', 'table');
 					}
 				});
+				$('#id_s1').trigger('change');
 				
 			});
 		</script>
@@ -33,46 +34,50 @@
 			<div>選擇要看的賽季地城</div>
 			<div class="form-check form-check-inline">
 				
-				<input class="form-check-input" type="radio" name="season_filter" value="s0">
+				<input class="form-check-input" type="radio" name="season_filter" id="id_s0" value="s0">
 				<label class="form-check-label">s0</label>
 			</div>
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="season_filter" value="s1" checked>
+				<input class="form-check-input" type="radio" name="season_filter" id="id_s1" value="s1" checked>
 				<label class="form-check-label text-nowrap">s1</label>
 			</div>
 		</div>
 		
 		<p class="text-start"></p>
 		
-		<table id="s0" class="table table-striped" style="width:100%;display:none;">
-			<thead>
-				<tr>
-					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-			<tfoot>
-				<tr>
-					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
-				</tr>
-			</tfoot>
-		</table>
+		<div id="id_all_s0" style="width:100%;display:none;">
+			<table id="s0" class="table table-striped" style="width:100%;display:none;">
+				<thead>
+					<tr>
+						<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
 		
-		<table id="s1" class="table table-striped" style="width:100%;display:none;">
-			<thead>
-				<tr>
-					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>團隊Tier</th><th>新增日期</th>
-				</tr>
-			</thead>
-			<tbody>
-			</tbody>
-			<tfoot>
-				<tr>
-					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>團隊Tier</th><th>新增日期</th>
-				</tr>
-			</tfoot>
-		</table>
+		<div id="id_all_s1" style="width:100%;display:none;">
+			<table id="s1" class="table table-striped" style="width:100%">
+				<thead>
+					<tr>
+						<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>團隊Tier</th><th>新增日期</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>團隊Tier</th><th>新增日期</th>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
 		
 		<p class="text-start">The main code is from https://datatables.net/examples/styling/bootstrap5.html</p>
 	</body>
