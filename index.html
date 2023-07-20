@@ -7,15 +7,10 @@
 		<script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>  
 		<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>  
 		<script type="text/javascript" src="js/dataTables.bootstrap5.min.js"></script>  
+		<script type="text/javascript" src="js/d4_utils.js"></script>  
 		<script>
 			$(document).ready(function(){
-			
-				$.getJSON('data/s0.json', function(data) {
-					$.each(data, function(i, item) {
-						console.log(data[i].name);
-					});
-				});
-		
+				update_s0_data();
 				new DataTable('#s0');
 			});
 		</script>
@@ -24,17 +19,16 @@
 		<p class="text-start">地城的排名順序是： A > B > C > D > E > F</p>
 		<p class="text-start">A~C 可以保留使用, 其他可以拆掉</p>
 		
-		
 		<div class="d-flex">
 			<div>選擇要看的賽季地城</div>
 			<div class="form-check form-check-inline">
 				
 				<input class="form-check-input" type="radio" name="radioFilter" id="id_radio_s0" >
-				<label class="form-check-label" for="inlineRadio1">s0</label>
+				<label class="form-check-label">s0</label>
 			</div>
 			<div class="form-check form-check-inline">
 				<input class="form-check-input" type="radio" name="radioFilter" id="id_radio_s1" checked>
-				<label class="form-check-label text-nowrap" for="inlineRadio2">s1</label>
+				<label class="form-check-label text-nowrap">s1</label>
 			</div>
 		</div>
 		
@@ -43,264 +37,14 @@
 		<table id="s0" class="table table-striped" style="width:100%">
 			<thead>
 				<tr>
-					<th style="display:none">索引</th>
-					<th>地城名</th>
-					<th>經驗Tier</th>
-					<th>雕紋Tier</th>
-					<th>綜合Tier</th>
-					<th>新增日期</th>
+					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td style="display:none">1</td>
-					<td>目盲洞穴</td>
-					<td>A</td>
-					<td>B</td>
-					<td>B</td>
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">2</td>
-					<td>古拉恩運河</td>
-					<td>B</td>
-					<td>A</td>
-					<td>A</td>
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">3</td>
-					<td>奧德林地</td>
-					<td>B</td>
-					<td>B</td>
-					<td>B</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">4</td>
-					<td>巨鎚林地</td>
-					<td>C</td>
-					<td>B</td>
-					<td>B</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">5</td>
-					<td>雷斯溫荒野</td>
-					<td>B</td>
-					<td>B</td>
-					<td>B</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">6</td>
-					<td>沉沒遺跡</td>
-					<td>B</td>
-					<td>C</td>
-					<td>B</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">7</td>
-					<td>巫水</td>
-					<td>C</td>
-					<td>B</td>
-					<td>C</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">8</td>
-					<td>失落秘庫</td>
-					<td>C</td>
-					<td>C</td>
-					<td>C</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">9</td>
-					<td>惡魔烙痕</td>
-					<td>C</td>
-					<td>D</td>
-					<td>C</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">10</td>
-					<td>大地之殤</td>
-					<td>D</td>
-					<td>C</td>
-					<td>C</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">11</td>
-					<td>邪教徒避難所</td>
-					<td>E</td>
-					<td>C</td>
-					<td>C</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">12</td>
-					<td>勇士之歿</td>
-					<td>C</td>
-					<td>E</td>
-					<td>D</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">13</td>
-					<td>低語松林</td>
-					<td>C</td>
-					<td>E</td>
-					<td>D</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">14</td>
-					<td>穹頂</td>
-					<td>D</td>
-					<td>E</td>
-					<td>D</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">15</td>
-					<td>毒蛇巢穴</td>
-					<td>E</td>
-					<td>D</td>
-					<td>D</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">16</td>
-					<td>墨根工坊</td>
-					<td>F</td>
-					<td>C</td>
-					<td>D</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">17</td>
-					<td>暗影墜落處</td>
-					<td>D</td>
-					<td>E</td>
-					<td>D</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">18</td>
-					<td>廢棄的礦道</td>
-					<td>D</td>
-					<td>E</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">19</td>
-					<td>先祖輓歌</td>
-					<td>D</td>
-					<td>E</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">20</td>
-					<td>黑暗深谷</td>
-					<td>E</td>
-					<td>D</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">21</td>
-					<td>古拉恩貧民窟</td>
-					<td>E</td>
-					<td>D</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">22</td>
-					<td>叛徒藏身處</td>
-					<td>E</td>
-					<td>E</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">23</td>
-					<td>西弗塔廢墟</td>
-					<td>F</td>
-					<td>D</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">24</td>
-					<td>科卓岡兵營</td>
-					<td>D</td>
-					<td>F</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">25</td>
-					<td>聖教軍大教堂</td>
-					<td>F</td>
-					<td>D</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">26</td>
-					<td>黑瑪瑙堡</td>
-					<td>D</td>
-					<td>F</td>
-					<td>E</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">27</td>
-					<td>卡爾蒂姆監獄</td>
-					<td>F</td>
-					<td>E</td>
-					<td>F</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">28</td>
-					<td>黑色收容所</td>
-					<td>E</td>
-					<td>F</td>
-					<td>F</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">29</td>
-					<td>密議</td>
-					<td>E</td>
-					<td>F</td>
-					<td>F</td>					
-					<td>2023/07/17</td>
-				</tr>
-				<tr>
-					<td style="display:none">30</td>
-					<td>野性巢穴</td>
-					<td>F</td>
-					<td>E</td>
-					<td>F</td>				
-					<td>2023/07/17</td>
-				</tr>
 			</tbody>
 			<tfoot>
 				<tr>
-					<th style="display:none">索引</th>
-					<th>地城名</th>
-					<th>經驗Tier</th>
-					<th>雕紋Tier</th>
-					<th>綜合Tier</th>
-					<th>新增日期</th>
+					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
 				</tr>
 			</tfoot>
 		</table>
