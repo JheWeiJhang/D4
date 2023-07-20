@@ -11,6 +11,7 @@
 		<script>
 			$(document).ready(function(){
 				update_s0_data();
+				$('#s0').addClass('table-striped');
 				new DataTable('#s0');
 			});
 		</script>
@@ -34,7 +35,7 @@
 		
 		<p class="text-start"></p>
 		
-		<table id="s0" class="table table-striped" style="width:100%">
+		<table id="s0" class="table" style="width:100%">
 			<thead>
 				<tr>
 					<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
