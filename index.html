@@ -18,10 +18,10 @@
 					hide_tables();
 					if ($(this).is(':checked')) {
 						var target_id = "#id_all_"+$(this).val();
-						$(target_id).css('display', 'table');
+						$(target_id).show();
 					}
 				});
-				$('#id_s1').trigger('change');
+				$('#id_radio_s1').trigger('change');
 				
 			});
 		</script>
@@ -34,11 +34,11 @@
 			<div>選擇要看的賽季地城</div>
 			<div class="form-check form-check-inline">
 				
-				<input class="form-check-input" type="radio" name="season_filter" id="id_s0" value="s0">
+				<input class="form-check-input" type="radio" name="season_filter" id="id_radio_s0" value="s0">
 				<label class="form-check-label">s0</label>
 			</div>
 			<div class="form-check form-check-inline">
-				<input class="form-check-input" type="radio" name="season_filter" id="id_s1" value="s1" checked>
+				<input class="form-check-input" type="radio" name="season_filter" id="id_radio_s1" value="s1" checked>
 				<label class="form-check-label text-nowrap">s1</label>
 			</div>
 		</div>
@@ -46,7 +46,7 @@
 		<p class="text-start"></p>
 		
 		<div id="id_all_s0" style="width:100%;display:none;">
-			<table id="s0" class="table table-striped" style="width:100%;display:none;">
+			<table id="id_table_s0" class="table table-striped" style="width:100%">
 				<thead>
 					<tr>
 						<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>綜合Tier</th><th>新增日期</th>
@@ -63,7 +63,7 @@
 		</div>
 		
 		<div id="id_all_s1" style="width:100%;display:none;">
-			<table id="s1" class="table table-striped" style="width:100%">
+			<table id="id_table_s1" class="table table-striped" style="width:100%">
 				<thead>
 					<tr>
 						<th style="display:none">索引</th><th>地城名</th><th>經驗Tier</th><th>雕紋Tier</th><th>團隊Tier</th><th>新增日期</th>
