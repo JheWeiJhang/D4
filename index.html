@@ -9,14 +9,37 @@
 		<script type="text/javascript" src="js/dataTables.bootstrap5.min.js"></script>  
 		<script>
 			$(document).ready(function(){
-				new DataTable('#example');
+			
+				$.getJSON('data/s0.json', function(data) {
+					//myItems = data.items;
+					console.log(data);
+				});
+		
+				new DataTable('#s0');
 			});
 		</script>
 	</head>
 	<body>
-		<p class="text-start">The order of this ranking is A > B > C > D > E > F, A~C is good map for user</p>
+		<p class="text-start">地城的排名順序是： A > B > C > D > E > F</p>
+		<p class="text-start">A~C 可以保留使用, 其他可以拆掉</p>
 		
-		<table id="example" class="table table-striped" style="width:100%">
+		
+		<div class="d-flex">
+			<div>選擇要看的賽季地城</div>
+			<div class="form-check form-check-inline">
+				
+				<input class="form-check-input" type="radio" name="radioFilter" id="id_radio_s0" >
+				<label class="form-check-label" for="inlineRadio1">s0</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="radio" name="radioFilter" id="id_radio_s1" checked>
+				<label class="form-check-label text-nowrap" for="inlineRadio2">s1</label>
+			</div>
+		</div>
+		
+		<p class="text-start"></p>
+		
+		<table id="s0" class="table table-striped" style="width:100%">
 			<thead>
 				<tr>
 					<th style="display:none">索引</th>
