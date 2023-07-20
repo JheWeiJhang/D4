@@ -11,8 +11,9 @@
 			$(document).ready(function(){
 			
 				$.getJSON('data/s0.json', function(data) {
-					//myItems = data.items;
-					console.log(data);
+					$.each(data, function(i, item) {
+						console.log(data[i].name);
+					});
 				});
 		
 				new DataTable('#s0');
